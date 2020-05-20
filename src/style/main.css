@@ -1,0 +1,686 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/montserrat/subset-Montserrat-Bold.woff2') format('woff2'),
+        url('../font/montserrat/subset-Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/montserrat/subset-Montserrat-Regular.woff2') format('woff2'),
+        url('../font/montserrat/subset-Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: Montserrat;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: content-box; */
+}
+
+p {
+    font-size: 0.8125rem;
+}
+
+i{
+    cursor: pointer;
+}
+
+.fai-title h2, .fai-title span{
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+
+/* Navbar header */
+
+header {
+    background-color: rgb(41, 49, 51);
+    ;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+header .display-menu-list {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+}
+
+
+/* After click -> */
+
+header .ctnr-name-list-menu {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px 0;
+    transform: scaleY(0);
+    background-color: white;
+    transform-origin: center top;
+    transition: all 0.5s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+
+/* Animation when attribut get class open */
+
+header .ctnr-name-list-menu.open {
+    transform: scaleY(1);
+}
+
+
+/* Icone close nav list */
+
+header .ctnr-name-close {
+    width: 90%;
+    margin: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Name / surname */
+
+header h2 {
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+header h4 {
+    color: gray;
+}
+
+
+/* container icon fai close */
+
+header .icon-fa-open-close {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(236, 236, 236, 0.4);
+    border: 1px solid gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* x */
+
+header .icon-fa-open-close .close-menu {
+    color: black;
+    font-size: 0.95rem;
+}
+
+
+/* Container list */
+
+header .ctnr-list-menu-mobile {
+    width: 90%;
+    margin: 0% 5% 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+}
+
+
+/* Positionement div */
+
+header .accueil-menu-mobile,
+.projets-menu-mobile,
+.competence-menu-mobile,
+.cv-menu-mobile,
+.contact-menu-mobile {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Icon fai list */
+
+.list-menu-icon {
+    color: black;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(236, 236, 236, 0.4);
+    /* border: 1px solid gray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 25px;
+    font-size: 0.8rem;
+}
+
+header .ctnr-list-menu-mobile a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Desktop Menu */
+
+
+/* Div 53px */
+
+.ctnr-scroll-bar {
+    width: 2px;
+    height: 400px;
+    background-color: rgba(236, 236, 236, 1);
+    ;
+    position: fixed;
+    z-index: 1;
+    margin-left: 5%;
+    margin-top: 50%;
+}
+
+.scroll-bar-percent {
+    width: 2px;
+    height: 0px;
+    position: absolute;
+    z-index: 5;
+    margin-left: 5%;
+    margin-top: 25%;
+    background-color: #f0334a;
+}
+
+
+/* Scroll bar */
+
+.scroll-bar {
+    position: relative;
+    height: 100%;
+}
+
+.ctnr-number-section {
+    position: absolute;
+    left: -7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.number-section-1,
+.number-section-2,
+.number-section-3,
+.number-section-4,
+.number-section-5 {
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+/* -------------------------------------Home page */
+
+#ctnr-home-page {
+    height: 100vh;
+    /* height: calc(var(--vh, 1vh) * 100); */
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Container datas home page */
+
+.home-page {
+    width: 80%;
+    margin: 0 12.5%;
+    height: 100%;
+}
+
+
+/* Picture cyril marceau */
+
+.picture-user {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    /* background-image: url(../assets/images/mobile/picture_face_cyril.jpg);
+    background-size: cover; */
+    position: absolute;
+    bottom: 140px;
+    right: -155px;
+    z-index: -1;
+    filter: grayscale(1);
+}
+
+.picture-user img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+/* Lazy load */
+
+.lazy-load {
+    opacity: 0;
+    /* Animation sur l'opacité en 1s */
+    transition: opacity 1s;
+    /* Préviens le navigateur que l'opacité va changer */
+    will-change: opacity;
+}
+
+/* .reveal{
+    opacity: 0;
+} */
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+.ctnr-home-page-name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* container datas user */
+
+.ctnr-datas-user,
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 50%;
+    align-items: flex-end;
+    position: relative;
+}
+
+
+/* Name */
+
+.ctnr-datas-user .name-home-page {
+    font-size: 2rem;
+    margin: 0;
+    color: rgba(0, 0, 0, 1);
+    font-family: Montserrat;
+    font-weight: Bold;
+}
+
+.job {
+    height: 53px;
+}
+
+
+/* front-end */
+
+.ctnr-datas-user .front-end-home-page {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* where */
+
+.ctnr-datas-user .base-home-page {
+    font-size: 1rem;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.background-grey {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    right: 0;
+    z-index: -10;
+}
+
+
+/* Social media */
+
+.social {
+    height: 40%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-right: 0;
+    margin-left: 5%0;
+}
+
+.social a {
+    color: black;
+    outline: none;
+}
+
+
+/* -------------------------------------About me */
+
+#ctnr-about-me {
+    height: calc(100vh - 80px);
+    margin-top: 1px;
+}
+
+.about-me,
+.my-projects,
+.skills {
+    width: 80%;
+    margin: 0 12.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+hr {
+    width: 40%;
+    border: 1px solid #f0334a;
+    margin-left: 40%;
+}
+
+.fai-title {
+    display: flex;
+    align-items: center;
+}
+
+.fai-title i {
+    margin-right: 15px;
+    font-size: 1.75rem;
+    color: #f0334a;
+}
+
+.fai-title h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.fai-title span {
+    padding-bottom: 10px;
+    border-bottom: 1px solid red;
+}
+
+/* .datas-about-me h4{
+    margin-top: 0;
+} */
+
+.datas-about-me p {
+    line-height: 1.75rem;
+}
+
+.dl-cv {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dl-cv input {
+    color: white;
+    background-color: rgb(240, 51, 74);
+    border: none;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}
+
+.chevron-down-scroll {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.7rem;
+    color: black;
+}
+
+
+/* -----------------------------------------------My projects */
+
+#ctnr-my-projects,
+#ctnr-skills {
+    min-height: calc(100vh - 80px);
+}
+
+.my-projects,
+.skills {
+    justify-content: initial;
+    margin-top: 60px;
+}
+
+.ctnr-projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ctnr-project {
+    margin-top: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.title-project h3 {
+    text-transform: uppercase;
+}
+
+.picture-project {
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: gray;
+    box-shadow: 1px 1px 2px -1px rgba(0, 0, 0, 0.45);
+    border-radius: 1px;
+}
+
+.item-1 {
+    background-image: url();
+}
+
+.item-2 {
+    background-image: url(../images/mobile/project_kwick.png);
+}
+
+.item-3 {
+    background-image: url(../images/mobile/project_no_mercy.jpg);
+}
+
+.item-4 {
+    background-image: url(../images/mobile/project_magazine.jpg);
+}
+
+.item-5 {
+    background-image: url(../images/mobile/project_crud.jpg);
+}
+
+.ctnr-explication-social-project {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.explication {
+    width: 60%;
+}
+
+.social-project-github-visited {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    align-items: center;
+    font-size: 1.5rem;
+    /* color: rgb(240, 51, 74); */
+    background-color: rgb(240, 51, 74);
+    color: white;
+    padding: 8px 0;
+    border-radius: 2px;
+}
+
+.social-project-github-visited a {
+    color: white;
+}
+
+
+/* -----------------------------------------------Skills */
+
+.ctnr-developement-skills,
+.ctnr-design-skills {
+    /* display: flex;
+    flex-direction: column; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ctnr-item-skill {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+/* .ctnr-item-skill div{
+    width: 100%;
+  } */
+
+.item-skill {
+    /* display: flex;
+    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: flex-start;
+}
+
+
+/* .fai-skill {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    display: flex;
+} */
+
+.fai-skill i {
+    font-size: 3rem;
+    color: #f0334a
+}
+
+.fai-skill img {
+    width: 3rem;
+}
+
+
+/* .explication-skill {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+.explication-skill h5 {
+    margin: 20px 0 0 0;
+}
+
+.explication-skill ul {
+    padding: 0;
+}
+
+.explication-skill ul li {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #293133;
+    margin-top: 40px;
+}
+
+footer h2 {
+    margin: 0 0 30px 0;
+    color: white
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+footer li {
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+    margin-bottom: 0;
+    color: white;
+    text-align: center;
+}
+
+.ctnr-global-footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 40px 0;
+    width: 80%;
+    margin: 0 12.5%;
+}
+
+.name-social-footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.social-footer {
+    padding: 10px 0;
+    font-size: 0.825rem;
+}
+
+.social-footer a {
+    margin-left: 15px;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.menu-footer a{
+    font-size: 0.825rem;
+}

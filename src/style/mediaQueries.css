@@ -1,0 +1,476 @@
+/* Landscape */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Rem +0.2 */
+    p {
+        font-size: 0.875rem;
+    }
+    h4 {
+        font-size: 1.125rem;
+    }
+    /*-------------------------------------Home page */
+    .ctnr-datas-user .name-home-page {
+        font-size: 2.3rem;
+    }
+    .ctnr-datas-user .front-end-home-page {
+        font-size: 1.5rem;
+    }
+    .ctnr-datas-user .base-home-page {
+        font-size: 1.3rem;
+    }
+    .social a {
+        font-size: 1rem;
+    }
+    /*--------------------------About me */
+    .fai-title i {
+        font-size: 1.875rem;
+    }
+    .fai-title h2 {
+        font-size: 1.625rem;
+    }
+    .datas-about-me p {
+        line-height: 2.3rem;
+    }
+    .dl-cv input {
+        font-size: 0.875rem;
+    }
+    /*---------------------Projects */
+    .picture-project {
+        height: 300px;
+    }
+    /* --------------------Skill */
+    h5 {
+        font-size: 0.9375rem;
+    }
+    .ctnr-item-skill {
+        width: 50%;
+    }
+    .explication-skill ul li {
+        font-size: 0.875rem;
+    }
+    /*-------------------------Footer */
+    footer .social-footer,
+    footer a {
+        font-size: 0.875rem;
+    }
+    .ctnr-global-footer {
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    p {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+    .home-page {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .ctnr-datas-user {
+        height: 40%;
+    }
+    .ctnr-datas-user .name-home-page {
+        font-size: 2.5rem;
+    }
+    .ctnr-datas-user .front-end-home-page {
+        font-size: 1.7rem;
+    }
+    .ctnr-datas-user .base-home-page {
+        font-size: 1.5rem;
+    }
+    .social a {
+        font-size: 1.2rem;
+    }
+    /*--------------------------About me */
+    .fai-title i {
+        font-size: 2rem;
+    }
+    .fai-title h2 {
+        font-size: 1.75rem;
+    }
+    .datas-about-me p {
+        line-height: 2.5rem;
+    }
+    .dl-cv input {
+        font-size: 1rem;
+    }
+    /*---------------------Projects */
+    .ctnr-project{
+        width: 45%;
+        margin: 25px 2.5%;
+    }
+    .ctnr-datas-project{
+        margin-top: 20px;
+    }
+    .picture-project{
+        height: 300px;
+    }
+    .picture-project {
+        height: 300px;
+    }
+    .explication{
+        width: 100%;
+    }
+    .explication p{
+        margin: 0;
+    }
+    .ctnr-explication-social-project{
+        height: 150px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .social-project-github-visited{
+        height: auto;
+    }
+    /* --------------------Skill */
+    h5 {
+        font-size: 1rem;
+    }
+    .ctnr-item-skill {
+        width: 33%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .explication-skill ul li {
+        font-size: 1rem;
+    }
+    /* Footer */
+    footer .social-footer,
+    footer a {
+        font-size: 1rem;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-footer {
+        margin-top: 0;
+    }
+    .name-social-footer {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Rem +0.2 */
+    p {
+        font-size: 1.0625rem;
+    }
+    h4 {
+        font-size: 1.3125rem;
+    }
+    /* -------------------------------Header */
+    header .display-menu-list {
+        display: none;
+    }
+    header .ctnr-name-list-menu {
+        display: flex;
+        justify-content: space-around;
+        display: block;
+        position: initial;
+        width: 100%;
+        padding: 0;
+        height: 100%;
+        background-color: inherit;
+        transform: scaleY(1);
+    }
+    header .ctnr-name-close{
+        display: none;
+    }
+    header .ctnr-list-menu-mobile {
+        height: 0;
+        flex-direction: row;
+        height: 100%;
+    }
+    header .accueil-menu-mobile a,
+    header .projets-menu-mobile a,
+    header .competence-menu-mobile a,
+    header .cv-menu-mobile a,
+    header .contact-menu-mobile a {
+        color: white;
+    }
+    /*--------------------------------Scroll Bar */
+    .ctnr-scroll-bar {
+        margin-top: 30%;
+    }
+    /*--------------------------------Home page */
+    .home-page {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .ctnr-datas-user {
+        height: 40%;
+    }
+    .ctnr-datas-user .name-home-page {
+        font-size: 2.7rem;
+    }
+    .ctnr-datas-user .front-end-home-page {
+        font-size: 1.9rem;
+    }
+    .ctnr-datas-user .base-home-page {
+        font-size: 1.7rem;
+    }
+    .social a {
+        font-size: 1.4rem;
+    }
+    /* .picture-user {
+        width: 400px;
+        height: 400px;
+    } */
+    /*--------------------------About me */
+    .fai-title i {
+        font-size: 2.125rem;
+    }
+    .fai-title h2 {
+        font-size: 1.875rem;
+    }
+    .datas-about-me p {
+        line-height: 3rem;
+    }
+    .dl-cv input {
+        font-size: 1.0625rem
+    }
+    /*---------------------Projects */
+    .ctnr-project{
+        width: 45%;
+        margin: 25px 2.5%;
+    }
+    .ctnr-datas-project{
+        margin-top: 20px;
+    }
+    .picture-project{
+        height: 300px;
+    }
+    .picture-project {
+        height: 300px;
+    }
+    .explication{
+        width: 100%;
+    }
+    .explication p{
+        margin: 0;
+    }
+    .ctnr-explication-social-project{
+        height: 150px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .social-project-github-visited{
+        height: auto;
+    }
+    /* --------------------Skill */
+    h5 {
+        font-size: 1.25rem;
+    }
+    .ctnr-item-skill {
+        width: 33%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .item-skill {
+        width: 60%;
+    }
+    .explication-skill ul li {
+        font-size: 1.0625rem;
+    }
+    /* Footer */
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-footer {
+        margin-top: 0;
+    }
+    .name-social-footer {
+        margin-bottom: 0;
+    }
+    /* Footer */
+    footer .social-footer,
+    .menu-footer a{
+        font-size:1.0625rem;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-footer {
+        margin-top: 0;
+    }
+    .name-social-footer {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Rem +0.2 */
+    p {
+        font-size: 1.125rem;
+    }
+    h4 {
+        font-size: 1.4375rem;
+    }
+    /* Header */
+    header .display-menu-list {
+        display: none;
+    }
+    header .ctnr-name-list-menu {
+        display: flex;
+        justify-content: space-around;
+        display: block;
+        position: initial;
+        width: 100%;
+        padding: 0;
+        height: 100%;
+        background-color: inherit;
+        transform: scaleY(1);
+    }
+    header .ctnr-name-close{
+        display: none;
+    }
+    header .ctnr-list-menu-mobile {
+        height: 0;
+        flex-direction: row;
+        height: 100%;
+    }
+    header .accueil-menu-mobile a,
+    header .projets-menu-mobile a,
+    header .competence-menu-mobile a,
+    header .cv-menu-mobile a,
+    header .contact-menu-mobile a {
+        color: white;
+    }
+    /*--------------------------------Scroll Bar */
+    .ctnr-scroll-bar {
+        margin-top: 15%;
+    }
+    /*--------------------------------Home page */
+    .ctnr-datas-user .name-home-page {
+        font-size: 2.7rem;
+    }
+    .ctnr-datas-user .front-end-home-page, .typed-cursor {
+        font-size: 1.9rem;
+    }
+    .ctnr-datas-user .base-home-page {
+        font-size: 1.7rem;
+    }
+    .social a {
+        font-size: 1rem;
+        width: 50px;
+        height: 50px;
+    }
+    .background-grey{
+        background-color: rgb(236, 236, 236);
+    }
+    .picture-user{
+        left: -150px;
+        top: 150px;
+    }
+    /*--------------------------About me */
+    .fai-title i {
+        font-size: 2.125rem;
+    }
+    .fai-title h2 {
+        font-size: 1.875rem;
+    }
+    .datas-about-me{
+        width: 90%;
+    }
+    .datas-about-me p {
+        line-height: 3rem;
+    }
+    .dl-cv input {
+        font-size: 1.0625rem
+    }
+    /*----------------------------------Projects */
+    .title-project, .ctnr-datas-project{
+        display: none;
+    }
+    .title-project, .ctnr-datas-project{
+        display: none;
+    }
+    .title-project h3, .explication{
+        color: white;
+        margin-top: 0;
+    }
+    .langages{
+        display: none;
+    }
+    .ctnr-project{
+        width: 33%;
+        height: 300px;
+        position: relative;
+    }
+    .picture-project{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .explication{
+        text-align: center;
+    }
+    .ctnr-explication-social-project{
+        flex-direction: column;
+        align-items: center;
+    }
+    .chevron-down-project{
+        margin-top: 40px;
+    }
+    /* .chevron-down-scroll{
+        margin-top: 80px;
+    } */
+    /* --------------------Skill */
+    h5 {
+        font-size: 1.25rem;
+    }
+    .ctnr-item-skill {
+        width: 33%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .item-skill {
+        width: 60%;
+    }
+    .explication-skill ul li {
+        font-size: 1.0625rem;
+    }
+    /* Footer */
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-footer {
+        margin-top: 0;
+    }
+    .name-social-footer {
+        margin-bottom: 0;
+    }
+    /* Footer */
+    footer .social-footer,
+    .menu-footer a{
+        font-size:1.0625rem;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-footer {
+        margin-top: 0;
+    }
+    .name-social-footer {
+        margin-bottom: 0;
+    }
+}
