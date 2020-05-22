@@ -4,6 +4,7 @@
         url('../font/montserrat/subset-Montserrat-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -12,8 +13,21 @@
         url('../font/montserrat/subset-Montserrat-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
+#anchor-home-page,
+#anchor-about-me,
+#anchor-my-projects,
+#anchor-skills
+{
+    height:0;
+    font-size:0;
+    visibility:hidden;
+    display:block;
+    position:relative;
+    top:-80px;
+}
 
 * {
     font-family: Montserrat;
@@ -32,6 +46,11 @@ p {
 
 i{
     cursor: pointer;
+}
+
+h4, h3{
+    font-family: Montserrat;
+    font-weight: bold;
 }
 
 .fai-title h2, .fai-title span{
@@ -286,9 +305,15 @@ header .ctnr-list-menu-mobile a {
     will-change: opacity;
 }
 
-/* .reveal{
+.reveal{
     opacity: 0;
-} */
+}
+
+.reveal.revealed{
+    opacity: 1;
+    transition: opacity 0.5s;
+    will-change: opacity;
+}
 
 .lazy-load.loaded {
     opacity: 1;

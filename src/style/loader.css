@@ -38,12 +38,12 @@ section, header, footer{
    height: 30px;
    top: 95px;
    left: 95px;
-   background: #fff;
+   background: rgb(240, 51, 74);;
    border-radius: 50%;
    -webkit-animation-fill-mode: both;
            animation-fill-mode: both;
-   -webkit-animation: jump-jump-1 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
-           animation: jump-jump-1 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+   -webkit-animation: jump-jump-1 1.5s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+           animation: jump-jump-1 1.5s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
  }
  
  .dot-2 {
@@ -53,12 +53,12 @@ section, header, footer{
    height: 60px;
    top: 80px;
    left: 80px;
-   background: #fff;
+   background: rgb(240, 51, 74);;
    border-radius: 50%;
    -webkit-animation-fill-mode: both;
            animation-fill-mode: both;
-   -webkit-animation: jump-jump-2 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
-           animation: jump-jump-2 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+   -webkit-animation: jump-jump-2 1.5s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+           animation: jump-jump-2 1.5s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
  }
  
  .dot-3 {
@@ -68,12 +68,12 @@ section, header, footer{
    height: 90px;
    top: 65px;
    left: 65px;
-   background: #fff;
+   background: rgb(240, 51, 74);;
    border-radius: 50%;
    -webkit-animation-fill-mode: both;
            animation-fill-mode: both;
-   -webkit-animation: jump-jump-3 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
-           animation: jump-jump-3 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+   -webkit-animation: jump-jump-3 1.5s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+           animation: jump-jump-3 1.5s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
  }
  
  @-webkit-keyframes jump-jump-1 {

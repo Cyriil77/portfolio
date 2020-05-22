@@ -10,13 +10,13 @@
     <meta itemprop="name" content="Cyril Marceau - développeur front-end">
     <meta itemprop="description"
         content="Développeur front-end basé à Paris, étudiant à l'Ecole multimedia en développeur front-end.">
-    <meta itemprop="image" content="https://bruno-simon.com/social/share-1200x630.png">
+    <meta itemprop="image" content="">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cyril Marceau - développeur front-end">
     <meta name="twitter:description"
         content="Développeur front-end basé à Paris, étudiant à l'Ecole multimedia en développeur front-end.">
-    <meta name="twitter:image" content="https://bruno-simon.com/social/share-1200x600.png">
+    <meta name="twitter:image" content="">
 
     <meta property="og:site_name" content="Cyril Marceau - développeur front-end">
     <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
     <meta property="og:title" content="Cyril Marceau - développeur front-end">
     <meta property="og:description"
         content="Développeur front-end basé à Paris, étudiant à l'Ecole multimedia en développeur front-end.">
-    <meta property="og:image" content="https://bruno-simon.com/social/share-1200x630.png">
+    <meta property="og:image" content="">
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -41,7 +41,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marceau Cyril | Développeur front-end</title>
     <link rel="icon" href="./images/mobile/logo.png" />
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
 </head>
 
 <body>
@@ -82,42 +82,34 @@
                         <i class="fas fa-home"></i>
                     </div>
 
-                    <a href="#">Accueil</a>
+                    <a href="#anchor-home-page">Accueil</a>
                 </div>
 
-                <div class="projets-menu-mobile">
+                <div class="projets-menu-mobile active">
 
                     <div class="list-menu-icon">
                         <i class="fas fa-user"></i>
                     </div>
 
-                    <a href="#">A propos</a>
+                    <a href="#anchor-about-me">A propos</a>
                 </div>
 
-                <div class="competence-menu-mobile">
+                <div class="competence-menu-mobile active">
 
                     <div class="list-menu-icon">
                         <i class="fab fa-buffer"></i>
                     </div>
 
-                    <a href="#">Projets</a>
+                    <a href="#anchor-my-projects active">Projets</a>
                 </div>
 
-                <div class="cv-menu-mobile">
+                <div class="cv-menu-mobile active">
 
                     <div class="list-menu-icon">
                         <i class="fas fa-code"></i>
                     </div>
 
-                    <a href="#">Compétences</a>
-                </div>
-
-                <div class="contact-menu-mobile">
-
-                    <div class="list-menu-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <a href="#">Contact</a>
+                    <a href="#anchor-skills">Compétences</a>
                 </div>
 
             </div>
@@ -143,6 +135,7 @@
     </div>
 
     <section id="ctnr-home-page">
+        <div id="anchor-home-page"></div>
         <div class="home-page">
             <div class="background-grey">
                 <div class="picture-user">
@@ -170,11 +163,11 @@
 
 
             <div class="social">
-                <a href=""><i class="fas fa-phone-square-alt"></i></a>
-                <a href=""><i class="fas fa-envelope-square"></i></a>
-                <a href="https://www.linkedin.com/in/cyril-marceau-48a5a5177/" target="_blank" rel="noreferrer">
+                <a href="" name="tel"><i class="fas fa-phone-square-alt"></i></a>
+                <a href=""name="mail"><i class="fas fa-envelope-square"></i></a>
+                <a href="https://www.linkedin.com/in/cyril-marceau-48a5a5177/" name="linedin" target="_blank" rel="noreferrer">
                     <i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Cyriil77" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/Cyriil77" name="github" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
             </div>
             <div class="chevron-down-scroll">
                 <i class="fas fa-chevron-down"></i>
@@ -183,8 +176,10 @@
 
     </section>
 
-    <section id="ctnr-about-me">
+    <!-- Attribut name and balise a -->
 
+    <section id="ctnr-about-me">
+        <div id="anchor-about-me"></div>
         <div class="about-me">
 
             <div class="test reveal">
@@ -210,6 +205,7 @@
             </article>
 
             <div class="dl-cv">
+                <!-- PDF  a mettre dans static -->
                 <a class="reveal" href="./images/mobile/cv_cyril.pdf" target="_blank">
                     <input type="button" value="Télécharger mon CV">
                 </a>
@@ -224,7 +220,7 @@
     </section>
 
     <section id="ctnr-my-projects">
-
+        <div id="anchor-my-projects"></div>
         <div class="my-projects">
 
             <div class="test reveal">
@@ -239,7 +235,7 @@
 
             <div class="ctnr-projects">
 
-                <div class="ctnr-project">
+                <div class="ctnr-project reveal">
 
                     <div class="title-project">
                         <h3>Student Manager</h3>
@@ -272,7 +268,7 @@
 
                 </div>
 
-                <div class="ctnr-project">
+                <div class="ctnr-project reveal">
 
                     <div class="title-project">
                         <h3>Kwick tchat</h3>
@@ -305,7 +301,7 @@
 
                 </div>
 
-                <div class="ctnr-project">
+                <div class="ctnr-project reveal">
 
                     <div class="title-project">
                         <h3>no mercy 3d</h3>
@@ -338,7 +334,7 @@
 
                 </div>
 
-                <div class="ctnr-project">
+                <div class="ctnr-project reveal">
 
                     <div class="title-project">
                         <h3>global magazine</h3>
@@ -372,7 +368,7 @@
 
                 </div>
 
-                <div class="ctnr-project">
+                <div class="ctnr-project reveal">
 
                     <div class="title-project">
                         <h3>crud</h3>
@@ -405,7 +401,7 @@
 
                 </div>
 
-                <div class="ctnr-project">
+                <div class="ctnr-project reveal">
 
                     <div class="title-project">
                         <h3>Dernier projet</h3>
@@ -418,7 +414,7 @@
                         <div class="ctnr-explication-social-project">
 
                             <article class="explication">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit aspernatur quos placeat det.</p>
+                                <p>Calculatrice réalisé avec React</p>
                             </article>
                             <div class="social-project-github-visited">
                                 <a href="https://github.com/Cyriil77/studentManager" target="_blank" rel="noreferrer"><i
@@ -448,7 +444,7 @@
     </section>
 
     <section id="ctnr-skills">
-
+        <div id="anchor-skills"></div>
         <div class="skills">
 
             <div class="test reveal">
@@ -665,10 +661,11 @@
                     <nav>
                         <ul>
                             <li>
-                                <a href="">Accueil</a>
-                                <a href="">A propos</a>
-                                <a href="">Projet</a>
-                                <a href="">Compétences</a>
+                                <a href="#anchor-home-page">Accueil</a>
+                                <a href="#anchor-about-me">A propos</a>
+                                <a href="#anchor-my-projects">Projets</a>
+                                <a href="#anchor-skills">Compétences</a>
+            
                             </li>
                         </ul>
                     </nav>
@@ -680,6 +677,8 @@
 
         </div>
     </footer>
+
+    <meta name="google-site-verification" content="yIcC7_0VKXkgXBU5hKIhjt-peCxYzknpv0WyQZZ_jxk" />
 
     <!-- Global site tag (gtag.js) - Google Analytics
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159556923-1"></script>

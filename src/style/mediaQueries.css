@@ -360,6 +360,9 @@
     .ctnr-datas-user .front-end-home-page, .typed-cursor {
         font-size: 1.9rem;
     }
+    .ctnr-datas-user, .social{
+        padding-left: 5%;
+    }
     .ctnr-datas-user .base-home-page {
         font-size: 1.7rem;
     }

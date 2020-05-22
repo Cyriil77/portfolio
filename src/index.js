@@ -3,11 +3,23 @@
 import './style/loader.css'
 import './style/main.css';
 import './style/mediaQueries.css'
+
+// Header
 import './js/menu.js';
+
+// Animation
 import './js/gsap.js'
+
+// Home page
 import './js/typed.js';
+
+// Scroll bar
 import './js/scroll.js';
+
+// Hover project ->A A finir jeudi
 import './js/projects.js'
+
+// font awesome
 import './lib/fit.fontawesome.js';
 
 
@@ -20,6 +32,11 @@ window.addEventListener("load", () => {
 
     const mail = document.querySelectorAll('a')[7];
     mail.href = 'mailto:marceau.cyril@hotmail.fr';
+
+    const mailFooter = document.querySelectorAll('a')[16];
+    mailFooter.href = 'mailto:marceau.cyril@hotmail.fr';
+
+    console.log(document.querySelectorAll('a'))
 
     // Lazy load picture user
     const lazyLoadElement = document.querySelectorAll('.lazy-load')
@@ -49,13 +66,13 @@ window.addEventListener("load", () => {
 
         }
 
-        element.onload = () => {
-            element.classList.add('loaded');
-        }
+        // element.onload = () => {
+        //     element.classList.add('loaded');
+        // }
 
     }
 
-    // Delete text on iphone SE / 5
+    // Delete text on iphone SE / 5 and delete span
     if (window.innerWidth === 320) {
         const spanDeleteAboutMe = document.querySelectorAll('.datas-about-me span');
         spanDeleteAboutMe.forEach(element => {

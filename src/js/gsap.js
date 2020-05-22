@@ -1,67 +1,118 @@
-import { gsap, TimelineMax, Expo, TweenMax } from "gsap";
+import { gsap, TimelineLite, Expo, TweenLite } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { Timeline } from "gsap/gsap-core";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const chevronDownHomePage = document.querySelectorAll('.chevron-down-scroll i')[0];
-const destinationToScrollAboutMe = document.getElementById('ctnr-about-me');
 
 
 
-chevronDownHomePage.addEventListener('click', (e) => {
-    e.preventDefault();
-    const topPos = destinationToScrollAboutMe.offsetTop - 80;
-    gsap.to(window, { duration: 0.5, scrollTo: { y: topPos } });
-})
-
-let timeLine = new TimelineMax();
-
-// const socialIcon = document.querySelectorAll('.social a');
-// timeLine.staggerFrom(socialIcon, 0.7, { opacity: 0, y: -50 }, 0.3, 0.5);
+window.addEventListener('load', () => {
 
 
-const revealElements = document.querySelectorAll('.reveal');
+    const chevronDownHomePage = document.querySelectorAll('.chevron-down-scroll i')[0];
+    const destinationToScrollAboutMe = document.getElementById('ctnr-about-me');
 
-const revealItems = [];
-const scrollY = window.scrollY;
+    // Scroll to ctnr-about-me
+    chevronDownHomePage.addEventListener('click', (e) => {
+        e.preventDefault();
 
-for (const _element of revealElements) {
-    const item = {}
-    item.revealed = false
-    item.element = _element
+        const topPos = destinationToScrollAboutMe.offsetTop - 80;
+        gsap.to(window, { duration: 0.5, scrollTo: { y: topPos } });
+    })
 
 
-    const bounding = _element.getBoundingClientRect()
-    item.top = bounding.top + scrollY
-    item.height = bounding.height
 
-    revealItems.push(item)
-}
 
-window.addEventListener('resize', () => {
-    for (const _item of revealItems) {
-        const bounding = _item.element.getBoundingClientRect()
-        _item.top = bounding.top + scrollY
-        _item.height = bounding.height
+    // Animation social icon home-page
+    let timeLine = new TimelineLite();
+
+    const socialIcon = document.querySelectorAll('.social a');
+    timeLine.staggerFrom(socialIcon, 0.7, { opacity: 0, y: -50 }, 0.3, 0.5);
+
+    // Tween lite
+
+
+    // Intersection observer
+
+    // Ratio for detect intersection observer
+    const ratio = .5;
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: ratio
     }
-})
 
-window.addEventListener('scroll', () => {
-    const limit = window.scrollY + window.innerHeight
+    const revealItem = document.querySelectorAll('.reveal')
 
-    for (const _item of revealItems) {
-        if (!_item.revealed && limit > _item.top + _item.height) {
-            console.log(revealItems)
-            _item.revealed = true
-            if(_item.revealed == true) console.log(_item.element)
+    const v = document.querySelectorAll('.ctnr-project')
 
-            // _item.element.classList.add('revealed')
-            // TweenMax.to(revealItems[0].element, 1, { opacity: 1, x: -60, ease: Expo.easeInOut });
-            // TweenMax.to(revealItems[1].element, 1, { opacity: 1, x: -60, ease: Expo.easeInOut });
-            // timeLine
-            // TweenMax.to(revealItems[0].element, {opacity: 1, y:-60, ease: Expo.easeInOut})
-            // TweenMax.to(revealItems[1].element,{opacity: 1, x:-60, ease: Expo.easeInOut})
-        }
+
+    const callback = (entries, observer) => {
+
+        entries.forEach((entry, index) => {
+
+            if (entry.intersectionRatio > ratio) {
+
+                // After scroll > 1 observer is stopped
+                observer.unobserve(entry.target);
+
+                entry.target.classList.add('revealed')
+                console.log(entry.target, '->', index)
+
+                // About me -> title
+                if (entry.target == revealItem[0]) TweenLite.from(entry.target, 1, {x: -550, ease: Expo.easeInOut });
+                // About me -> text
+                if (entry.target == revealItem[1]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeOut }, '-=0.4');
+                // About me -> CV
+                if (entry.target == revealItem[2]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeOut }, '-=0.4');
+                // My project -> title
+                if (entry.target == revealItem[3]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeOut });
+                // project -> studentManager
+                if (entry.target == revealItem[4])TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeInOut });
+                // project -> kwick
+                if (entry.target == revealItem[5]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeInOut });
+                // project -> webgl
+                if (entry.target == revealItem[6]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeInOut });
+                // project -> global magazine
+                if (entry.target == revealItem[7]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+                // project -> crud
+                if (entry.target == revealItem[8]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+                // project -> last
+                if (entry.target == revealItem[9]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+                // Skill -> title
+                if (entry.target == revealItem[10]) TweenLite.from(entry.target, 1, {x: -150, ease: Expo.easeOut });
+                // HTML
+                if (entry.target == revealItem[11]) TweenLite.from(entry.target, 1, {x: -150, ease: Expo.easeOut });
+                // CSS
+                if (entry.target == revealItem[12]) TweenLite.from(entry.target, 1, {y: -150, ease: Expo.easeOut });
+                // JS
+                if (entry.target == revealItem[13]) TweenLite.from(entry.target, 1, {x: 150, ease: Expo.easeOut });
+                // Git
+                if (entry.target == revealItem[14]) TweenLite.from(entry.target, 1, {x: -150, ease: Expo.easeOut });
+                // PHP
+                if (entry.target == revealItem[15]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
+                // Indesign
+                if (entry.target == revealItem[16]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
+                // Illustrator
+                if (entry.target == revealItem[17]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
+                // Photoshop
+                if (entry.target == revealItem[18]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
+                // Première pro
+                if (entry.target == revealItem[19]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
+
+
+            }
+
+        })
+
     }
+
+    // Observe all element who get class reveal
+    const observer = new IntersectionObserver(callback, options);
+    document.querySelectorAll('.reveal').forEach((r) => {
+        observer.observe(r);
+    })
+
+
 })
