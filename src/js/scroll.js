@@ -1,7 +1,6 @@
 'use strict';
 
 window.addEventListener("load", () => {
-  console.log("js prêt !");
 
   // Scroll bar on left side
   function scrollIndicator() {

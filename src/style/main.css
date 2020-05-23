@@ -4,7 +4,6 @@
         url('../font/montserrat/subset-Montserrat-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -13,7 +12,6 @@
         url('../font/montserrat/subset-Montserrat-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 #anchor-home-page,
@@ -258,7 +256,7 @@ header .ctnr-list-menu-mobile a {
 
 #ctnr-home-page {
     height: 100vh;
-    /* height: calc(var(--vh, 1vh) * 100); */
+    height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
     position: relative;
 }
@@ -456,7 +454,7 @@ hr {
     margin-top: 10px;
 }
 
-.dl-cv input {
+.dl-cv a {
     color: white;
     background-color: rgb(240, 51, 74);
     border: none;
@@ -464,6 +462,7 @@ hr {
     text-transform: uppercase;
     outline: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .chevron-down-scroll {
@@ -512,8 +511,19 @@ hr {
     border-radius: 1px;
 }
 
+.desktop-only-project{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(41, 49, 51, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
 .item-1 {
-    background-image: url();
+    background-image: url(../images/mobile/project_student_manager.png);
 }
 
 .item-2 {

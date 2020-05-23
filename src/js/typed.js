@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
     const typed = new Typed('.name-home-page', {
         startDelay: 300,
         loop: false,
-        strings: ['Marceau cyril^700'],
+        strings: ['Marceau Cyril^700'],
         typeSpeed: 75,
         onComplete: function (self) { self.cursor.remove(), typedFront(), parentWhere.appendChild(createLive) }
     })

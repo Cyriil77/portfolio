@@ -36,7 +36,15 @@ window.addEventListener("load", () => {
     const mailFooter = document.querySelectorAll('a')[16];
     mailFooter.href = 'mailto:marceau.cyril@hotmail.fr';
 
-    console.log(document.querySelectorAll('a'))
+    // console.log(document.querySelectorAll('a'))
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
 
     // Lazy load picture user
     const lazyLoadElement = document.querySelectorAll('.lazy-load')
