@@ -33,10 +33,10 @@ window.addEventListener("load", () => {
     const mail = document.querySelectorAll('a')[6];
     mail.href = 'mailto:marceau.cyril@hotmail.fr';
 
-    const mailFooter = document.querySelectorAll('a')[15];
+    const mailFooter = document.querySelectorAll('a')[16];
     mailFooter.href = 'mailto:marceau.cyril@hotmail.fr';
 
-    const telFooter = document.querySelectorAll('a')[16];
+    const telFooter = document.querySelectorAll('a')[17];
     telFooter.href = 'tel:0617881934';
 
     // console.log(document.querySelectorAll('a'))
@@ -85,12 +85,12 @@ window.addEventListener("load", () => {
 
 
 
-    // Delete text on iphone SE / 5 and delete span
-    if (window.innerWidth === 320) {
-        const spanDeleteAboutMe = document.querySelectorAll('.datas-about-me span');
-        spanDeleteAboutMe.forEach(element => {
-            element.style.display = 'none';
-        });
-    }
+// Delete text on iphone SE / 5 and delete span
+if (window.innerWidth === 320) {
+    const spanDeleteAboutMe = document.querySelectorAll('.datas-about-me span');
+    spanDeleteAboutMe.forEach(element => {
+        element.style.display = 'none';
+    });
+}
 
 });

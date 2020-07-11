@@ -103,6 +103,7 @@ header .ctnr-name-list-menu {
 header .ctnr-name-list-menu.open {
     transform: translateX(0);
     transition-duration: 800ms;
+    transition-property: transform;
 }
 
 

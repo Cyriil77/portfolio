@@ -7,18 +7,15 @@ window.addEventListener("load", () => {
     //Div container menu
     const parentMenu = document.querySelector('.ctnr-name-list-menu');
 
-    const anchor = document.querySelectorAll('.anchor');
-    console.log(anchor)
-
-    for (let a = 0; a < anchor.length; a++) {
-        const element = anchor[a];
-        element.addEventListener('click', () => {
-            parentMenu.classList.toggle('open');
-            parentMenu.parentNode.style.height = 80 + 'px';
-            displayMenu.style.display = 'flex';
-        })
-        
-    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
     displayMenu.addEventListener('click', (e) => {
         e.preventDefault();
@@ -66,7 +63,6 @@ window.addEventListener("load", () => {
                 const menuActiveAboutMe = document.getElementsByClassName('active')[1];
                 const menuActiveProjects = document.getElementsByClassName('active')[2];
                 const menuActiveSkills = document.getElementsByClassName('active')[3];
-
 
                 if (entry.target == section[0]) {
                     menuActiveHomePage.children[0].style.color = 'white';
