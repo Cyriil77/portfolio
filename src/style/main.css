@@ -88,7 +88,7 @@ header .ctnr-name-list-menu {
     flex-direction: column;
     justify-content: space-around;
     padding: 40px 0;
-    transform: scaleY(0);
+    transform: translateX(2000px);
     background-color: white;
     transform-origin: center top;
     transition: all 0.5s ease;
@@ -101,7 +101,8 @@ header .ctnr-name-list-menu {
 /* Animation when attribut get class open */
 
 header .ctnr-name-list-menu.open {
-    transform: scaleY(1);
+    transform: translateX(0);
+    transition-duration: 800ms;
 }
 
 

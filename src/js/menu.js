@@ -7,6 +7,19 @@ window.addEventListener("load", () => {
     //Div container menu
     const parentMenu = document.querySelector('.ctnr-name-list-menu');
 
+    const anchor = document.querySelectorAll('.anchor');
+    console.log(anchor)
+
+    for (let a = 0; a < anchor.length; a++) {
+        const element = anchor[a];
+        element.addEventListener('click', () => {
+            parentMenu.classList.toggle('open');
+            parentMenu.parentNode.style.height = 80 + 'px';
+            displayMenu.style.display = 'flex';
+        })
+        
+    }
+
     displayMenu.addEventListener('click', (e) => {
         e.preventDefault();
 
