@@ -27,14 +27,17 @@ import './lib/fit.fontawesome.js';
 window.addEventListener("load", () => {
 
     // Home page add dynamically text
-    const tel = document.querySelectorAll('a')[6];
+    const tel = document.querySelectorAll('a')[5];
     tel.href = 'tel:0617881934';
 
-    const mail = document.querySelectorAll('a')[7];
+    const mail = document.querySelectorAll('a')[6];
     mail.href = 'mailto:marceau.cyril@hotmail.fr';
 
-    const mailFooter = document.querySelectorAll('a')[16];
+    const mailFooter = document.querySelectorAll('a')[15];
     mailFooter.href = 'mailto:marceau.cyril@hotmail.fr';
+
+    const telFooter = document.querySelectorAll('a')[16];
+    telFooter.href = 'tel:0617881934';
 
     // console.log(document.querySelectorAll('a'))
 
@@ -51,14 +54,15 @@ window.addEventListener("load", () => {
 
     for (const element of lazyLoadElement) {
 
-        if (element.complete) {
-            const loader = document.querySelector('.loader');
-            const header = document.getElementsByTagName('header')[0];
-            const ctnrHomePage = document.getElementById('ctnr-home-page');
-            const ctnrAboutMe = document.getElementById('ctnr-about-me');
-            const ctnrMyProject = document.getElementById('ctnr-my-projects');
-            const ctnrSkill = document.getElementById('ctnr-skills');
-            const footer = document.getElementsByTagName('footer')[0];
+        const loader = document.querySelector('.loader');
+        const header = document.getElementsByTagName('header')[0];
+        const ctnrHomePage = document.getElementById('ctnr-home-page');
+        const ctnrAboutMe = document.getElementById('ctnr-about-me');
+        const ctnrMyProject = document.getElementById('ctnr-my-projects');
+        const ctnrSkill = document.getElementById('ctnr-skills');
+        const footer = document.getElementsByTagName('footer')[0];
+
+        if (element.complete && document.fonts.ready.then(() => {
             loader.remove()
 
             header.style.display = 'block';
@@ -71,14 +75,15 @@ window.addEventListener("load", () => {
             setTimeout(() => {
                 element.classList.add('loaded');
             }, 500);
-
-        }
+        }));
 
         // element.onload = () => {
         //     element.classList.add('loaded');
         // }
 
     }
+
+
 
     // Delete text on iphone SE / 5 and delete span
     if (window.innerWidth === 320) {

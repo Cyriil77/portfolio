@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
 
     // Active menu
     // Ratio for detect
-    const section = document.querySelectorAll('section')
+    const section = document.querySelectorAll('section');
     const ratio = .7;
 
     const options = {
@@ -49,10 +49,10 @@ window.addEventListener("load", () => {
 
             if (entry.intersectionRatio > ratio) {
                 // console.log('visible')
-                const menuActiveHomePage = document.getElementsByClassName('active')[0]
-                const menuActiveAboutMe = document.getElementsByClassName('active')[1]
-                const menuActiveProjects = document.getElementsByClassName('active')[2]
-                const menuActiveSkills = document.getElementsByClassName('active')[3]
+                const menuActiveHomePage = document.getElementsByClassName('active')[0];
+                const menuActiveAboutMe = document.getElementsByClassName('active')[1];
+                const menuActiveProjects = document.getElementsByClassName('active')[2];
+                const menuActiveSkills = document.getElementsByClassName('active')[3];
 
 
                 if (entry.target == section[0]) {
@@ -101,7 +101,7 @@ window.addEventListener("load", () => {
 
     }
 
-    // Observe all element who get class reveal
+    // Observe section
     const observer = new IntersectionObserver(callback, options);
     section.forEach((r) => {
         observer.observe(r);

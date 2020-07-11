@@ -3,9 +3,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-
-
-
 window.addEventListener('load', () => {
 
 
@@ -63,9 +60,9 @@ window.addEventListener('load', () => {
         threshold: ratio
     }
 
-    const revealItem = document.querySelectorAll('.reveal')
+    const revealItem = document.querySelectorAll('.reveal');
 
-    const v = document.querySelectorAll('.ctnr-project')
+    const v = document.querySelectorAll('.ctnr-project');
 
 
     const callback = (entries, observer) => {
@@ -120,7 +117,6 @@ window.addEventListener('load', () => {
                 if (entry.target == revealItem[18]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
                 // Première pro
                 if (entry.target == revealItem[19]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
-
 
             }
 

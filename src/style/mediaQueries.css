@@ -197,9 +197,9 @@
         color: white;
     }
     /*--------------------------------Scroll Bar */
-    .ctnr-scroll-bar {
+    /* .ctnr-scroll-bar {
         margin-top: 30%;
-    }
+    } */
     /*--------------------------------Home page */
     .home-page {
         height: 90%;
@@ -350,9 +350,9 @@
         color: white;
     }
     /*--------------------------------Scroll Bar */
-    .ctnr-scroll-bar {
+    /* .ctnr-scroll-bar {
         margin-top: 15%;
-    }
+    } */
     /*--------------------------------Home page */
     .ctnr-datas-user .name-home-page {
         font-size: 2.7rem;
@@ -412,7 +412,11 @@
         width: 33%;
         height: 300px;
         position: relative;
+        /* margin-top: 0; */
     }
+    /* .global-magazine, .crud{
+        margin-top: 0;
+    } */
     .picture-project{
         width: 100%;
         height: 100%;

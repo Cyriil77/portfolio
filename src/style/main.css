@@ -201,6 +201,13 @@ header .ctnr-list-menu-mobile a {
 
 /* Div 53px */
 
+body .scroll{
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 .ctnr-scroll-bar {
     width: 2px;
     height: 400px;
@@ -209,7 +216,7 @@ header .ctnr-list-menu-mobile a {
     position: fixed;
     z-index: 1;
     margin-left: 5%;
-    margin-top: 50%;
+    /* margin-top: 50%; */
 }
 
 .scroll-bar-percent {
@@ -540,6 +547,10 @@ hr {
 
 .item-5 {
     background-image: url(../images/mobile/project_crud.jpg);
+}
+
+.item-6{
+    background-image: url(../images/mobile/the_weeknd.jpg);
 }
 
 .ctnr-explication-social-project {
