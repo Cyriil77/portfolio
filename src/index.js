@@ -16,7 +16,7 @@ import './js/typed.js';
 // Scroll bar
 import './js/scroll.js';
 
-// Hover project ->A A finir jeudi
+// Project
 import './js/projects.js'
 
 // font awesome

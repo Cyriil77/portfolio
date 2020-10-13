@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="description"
-        content="Développeur front-end basé à Paris, étudiant à l'Ecole multimedia en tant que développeur front-end.">
+    <meta name="description" content="Développeur front-end basé à Paris, étudiant à l'Ecole multimedia en tant que développeur front-end.">
 
     <meta itemprop="name" content="Cyril Marceau - développeur front-end">
     <meta itemprop="description"
@@ -47,7 +46,7 @@
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
-    <title>Marceau Cyril | Développeur front-end</title>
+    <title id="mymetatag">Marceau Cyril | Développeur front-end</title>
 
 </head>
 
@@ -61,6 +60,7 @@
             </div>
         </div>
     </div>
+
     <header>
         <div class="display-menu-list">
             <i class="fas fa-bars"></i>
@@ -72,11 +72,11 @@
 
                 <div class="name">
                     <h2>Marceau Cyril</h2>
-                    <h4>Portfolio</h4>
+                    <h3>Portfolio</h3>
                 </div>
 
                 <div class="icon-fa-open-close">
-                    <a class="close-menu" href=""><i class="fas fa-times"></i></a>
+                    <a rel="noopener" class="close-menu" href=""><i class="fas fa-times"></i></a>
                 </div>
 
             </div>
@@ -89,7 +89,7 @@
                         <i class="fas fa-home"></i>
                     </div>
 
-                    <a class="anchor" href="#anchor-home-page">Accueil</a>
+                    <a rel="noopener" class="anchor" href="#anchor-home-page">Accueil</a>
                 </div>
 
                 <div class="projets-menu-mobile active">
@@ -98,7 +98,7 @@
                         <i class="fas fa-user"></i>
                     </div>
 
-                    <a class="anchor" href="#anchor-about-me">A propos</a>
+                    <a rel="noopener" class="anchor" href="#anchor-about-me">A propos</a>
                 </div>
 
                 <div class="competence-menu-mobile active">
@@ -107,7 +107,7 @@
                         <i class="fab fa-buffer"></i>
                     </div>
 
-                    <a class="anchor" href="#anchor-my-projects">Projets</a>
+                    <a rel="noopener" class="anchor" href="#anchor-my-projects">Projets</a>
                 </div>
 
                 <div class="cv-menu-mobile active">
@@ -116,7 +116,7 @@
                         <i class="fas fa-code"></i>
                     </div>
 
-                    <a class="anchor" href="#anchor-skills">Compétences</a>
+                    <a rel="noopener" class="anchor" href="#anchor-skills">Compétences</a>
                 </div>
 
             </div>
@@ -156,16 +156,18 @@
             <div class="ctnr-datas-user">
 
                 <div class="ctnr-home-page-name">
-                    <h1 class="name-home-page"></h1>
+                    <h1 class="name-home-page"> Marceau Cyril </h1>
+                </div>
+
+                <div class="ctnr-home-page-name base-to-paris">
+
                 </div>
 
                 <div class="ctnr-home-page-name job">
                     <p class="front-end-home-page"></p>
                 </div>
 
-                <div class="ctnr-home-page-name base-to-paris">
 
-                </div>
                 <!-- <p class="base-home-page">Basé à Paris</p> -->
             </div>
 
@@ -173,13 +175,22 @@
 
 
             <div class="social">
-                <a href="" name="tel"><i class="fas fa-phone-square-alt"></i></a>
-                <a href="" name="mail"><i class="fas fa-envelope-square"></i></a>
-                <a href="https://www.linkedin.com/in/cyril-marceau-48a5a5177/" name="linkedin" target="_blank"
-                    rel="noreferrer">
-                    <i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Cyriil77" name="github" target="_blank" rel="noreferrer"><i
-                        class="fab fa-github"></i></a>
+                <a rel="noopener" href="" name="tel">
+                    <i class="fas fa-phone-square-alt"></i>
+                </a>
+
+                <a rel="noopener" href="" name="mail">
+                    <i class="fas fa-envelope-square"></i>
+                </a>
+
+                <a rel="noopener" href="https://www.linkedin.com/in/cyril-marceau-48a5a5177/" name="linkedin" target="_blank" rel="noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a rel="noopener" href="https://github.com/Cyriil77" name="github" target="_blank" rel="noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                
             </div>
             <div class="chevron-down-scroll">
                 <i class="fas fa-chevron-down"></i>
@@ -204,7 +215,7 @@
 
 
             <article class="datas-about-me">
-                <p class="reveal">Actuellement en 2ème année à l’Ecole Multimedia et en 1ère année du cursus
+                <p class="reveal">Actuellement en 3ème année à l’Ecole Multimedia et en 1ère année du cursus
                     <strong>Développeur
                         Front-End</strong> à Paris 3, je suis à la recherche d’une <strong>alternance</strong> à partir
                     de septembre 2020 dans mon domaine de prédilection.
@@ -215,11 +226,12 @@
                         alternance
                         un vrai
                         partage d’expérience.</span> </p>
+
             </article>
 
             <div class="dl-cv">
                 <!-- PDF  a mettre dans static -->
-                <a class="reveal" href="./CV_Marceau_Cyril.pdf" target="_blank">Télécharger mon CV</a>
+                <a rel="noopener" class="reveal" href="./CV_Marceau_Cyril.pdf" target="_blank">Télécharger mon CV</a>
             </div>
 
             <div class="chevron-down-scroll">
@@ -266,7 +278,7 @@
                                 </p>
                             </article>
                             <div class="social-project-github-visited">
-                                <a href="https://github.com/Cyriil77/studentManager" target="_blank" rel="noreferrer"><i
+                                <a rel="noopener" href="https://github.com/Cyriil77/studentManager" target="_blank" rel="noreferrer"><i
                                         class="fab fa-github-square"></i></a>
                             </div>
 
@@ -300,7 +312,7 @@
                                     temps de pouvoir parler en direct sur cette interface.</p>
                             </article>
                             <div class="social-project-github-visited">
-                                <a href="https://github.com/Cyriil77/Kwick_tchat" target="_blank" rel="noreferrer"><i
+                                <a rel="noopener" href="https://github.com/Cyriil77/Kwick_tchat" target="_blank" rel="noreferrer"><i
                                         class="fab fa-github-square"></i></a>
                             </div>
 
@@ -334,7 +346,7 @@
                                     piloter ce vaisseau et esquiver les astéroides.</p>
                             </article>
                             <div class="social-project-github-visited">
-                                <a href="https://github.com/Cyriil77/No_Mercy_3D" target="_blank" rel="noreferrer"><i
+                                <a rel="noopener" href="https://github.com/Cyriil77/No_Mercy_3D" target="_blank" rel="noreferrer"><i
                                         class="fab fa-github-square"></i></a>
                             </div>
 
@@ -342,7 +354,7 @@
 
                         <div class="langages">
                             <h4>Technologies</h4>
-                            <p>HTML / CSS / javaScript / Three.js</p>
+                            <p>HTML / CSS / JavaScript / Three.js</p>
                         </div>
 
                     </div>
@@ -369,7 +381,7 @@
                             </article>
                             <div class="social-project-github-visited">
 
-                                <a href="https://github.com/Cyriil77/global_magazine" target="_blank"
+                                <a rel="noopener" href="https://github.com/Cyriil77/global_magazine" target="_blank"
                                     rel="noreferrer"><i class="fab fa-github-square"></i></a>
                             </div>
 
@@ -403,7 +415,7 @@
                                     et d’un intervenant de l’école.</p>
                             </article>
                             <div class="social-project-github-visited">
-                                <a href="https://github.com/Cyriil77/crud_serie" target="_blank" rel="noreferrer"><i
+                                <a rel="noopener" href="https://github.com/Cyriil77/crud_serie" target="_blank" rel="noreferrer"><i
                                         class="fab fa-github-square"></i></a>
                             </div>
 
@@ -438,7 +450,7 @@
                                 </p>
                             </article>
                             <div class="social-project-github-visited">
-                                <a href="https://github.com/Cyriil77/The_weeknd" target="_blank" rel="noreferrer"><i
+                                <a rel="noopener" href="https://github.com/Cyriil77/The_weeknd" target="_blank" rel="noreferrer"><i
                                         class="fab fa-github-square"></i></a>
                             </div>
 
@@ -446,7 +458,7 @@
 
                         <div class="langages">
                             <h4>Technologies</h4>
-                            <p>HTML / CSS / / javaScript / Webpack / Firebase</p>
+                            <p>HTML / CSS / JavaScript / Webpack / Firebase</p>
                         </div>
 
                     </div>
@@ -511,8 +523,7 @@
                                 <h5><strong>CSS</strong></h5>
                                 <ul>
                                     <li>Responsive</li>
-                                    <li>Bootstrap</li>
-                                    <li>Tailwind</li>
+                                    <li>Animations</li>
                                 </ul>
 
                             </div>
@@ -526,12 +537,11 @@
                             </div>
 
                             <div class="explication-skill">
-                                <h5><strong>JavaScript</strong></h5>
+                                <h5><strong>Javascript</strong></h5>
                                 <ul>
-                                    <li>React</li>
-                                    <li>jQuery</li>
-                                    <li>Three.js</li>
-                                    <li>Cannon.js</li>
+                                    <li>Manipulation du DOM</li>
+                                    <li>Animations</li>
+                                    <li>3D</li>
                                     <li>Progressive Web App</li>
                                 </ul>
 
@@ -542,14 +552,34 @@
                     <div class="ctnr-item-skill">
                         <div class="item-skill reveal">
                             <div class="fai-skill">
-                                <i class="fab fa-github-square"></i>
+                                <i class="fas fa-cogs"></i>
                             </div>
 
                             <div class="explication-skill">
-                                <h5><strong>Git</strong></h5>
+                                <h5><strong>Frameworks</strong></h5>
                                 <ul>
-                                    <li>Github</li>
-                                    <li>Projets commun</li>
+                                    <li>React</li>
+                                    <li>Framework 7</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ctnr-item-skill">
+                        <div class="item-skill reveal">
+                            <div class="fai-skill">
+                                <i class="fas fa-archive"></i>
+                            </div>
+
+                            <div class="explication-skill">
+                                <h5><strong>Librairies</strong></h5>
+                                <ul>
+                                    <li>jQuery</li>
+                                    <li>Bootstrap</li>
+                                    <li>Three.js</li>
+                                    <li>Cannon.js</li>
                                 </ul>
 
                             </div>
@@ -565,7 +595,26 @@
                             <div class="explication-skill">
                                 <h5><strong>PHP</strong></h5>
                                 <ul>
-                                    <li>Base de donnée MYSQL</li>
+                                    <li>Intéraction avec une base de donnée</li>
+                                    <li>Traitement des formulaires</li>
+                                    <li>Sessions</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ctnr-item-skill">
+                        <div class="item-skill reveal">
+                            <div class="fai-skill">
+                                <i class="fas fa-database"></i>
+                            </div>
+
+                            <div class="explication-skill">
+                                <h5><strong>Base de donnée</strong></h5>
+                                <ul>
+                                    <li>MySQL</li>
+                                    <li>Firebase</li>
                                 </ul>
 
                             </div>
@@ -583,6 +632,23 @@
                                 <ul>
                                     <li>Webpack</li>
                                     <li>Parcel</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ctnr-item-skill">
+                        <div class="item-skill reveal">
+                            <div class="fai-skill">
+                                <i class="fab fa-github-square"></i>
+                            </div>
+
+                            <div class="explication-skill">
+                                <h5><strong>Git</strong></h5>
+                                <ul>
+                                    <li>Github</li>
+                                    <li>Projets commun</li>
                                 </ul>
 
                             </div>
@@ -679,20 +745,20 @@
 
                     <div class="social-footer">
                         <i class="fas fa-envelope-square"></i>
-                        <a href="">marceau.cyril@hotmail.fr</a>
+                        <a rel="noopener" href="">marceau.cyril@hotmail.fr</a>
                     </div>
 
                     <div class="social-footer">
                         <i class="fas fa-phone-square-alt"></i>
-                        <a href="">06 17 88 19 34</a>
+                        <a rel="noopener" href="">06 17 88 19 34</a>
                     </div>
                     <div class="social-footer">
                         <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/cyril-marceau-48a5a5177/">Profil linkedin</a>
+                        <a rel="noopener" href="https://www.linkedin.com/in/cyril-marceau-48a5a5177/">Profil linkedin</a>
                     </div>
                     <div class="social-footer">
                         <i class="fab fa-github"></i>
-                        <a href="">Profil Github</a>
+                        <a rel="noopener" href="">Profil Github</a>
                     </div>
                 </div>
 
@@ -703,10 +769,10 @@
                     <nav>
                         <ul>
                             <li>
-                                <a href="#anchor-home-page">Accueil</a>
-                                <a href="#anchor-about-me">A propos</a>
-                                <a href="#anchor-my-projects">Projets</a>
-                                <a href="#anchor-skills">Compétences</a>
+                                <a rel="noopener" href="#anchor-home-page">Accueil</a>
+                                <a rel="noopener" href="#anchor-about-me">A propos</a>
+                                <a rel="noopener" href="#anchor-my-projects">Projets</a>
+                                <a rel="noopener" href="#anchor-skills">Compétences</a>
 
                             </li>
                         </ul>

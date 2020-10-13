@@ -10,10 +10,18 @@ window.addEventListener("load", () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-    
+
+            console.log(this.parentNode.children[0])
+
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+            if (window.innerWidth <= 991.98) {
+                parentMenu.classList.toggle('open');
+                parentMenu.parentNode.style.height = 80 + 'px';
+                displayMenu.style.display = 'flex';
+            }
+
         });
     });
 
@@ -32,6 +40,7 @@ window.addEventListener("load", () => {
 
     closeMenu.addEventListener('click', (e) => {
         e.preventDefault();
+        
 
         displayMenu.classList.toggle('open');
         parentMenu.classList.toggle('open');
@@ -45,7 +54,8 @@ window.addEventListener("load", () => {
     // Active menu
     // Ratio for detect
     const section = document.querySelectorAll('section');
-    const ratio = .7;
+
+    const ratio = .5;
 
     const options = {
         root: null,
@@ -57,6 +67,10 @@ window.addEventListener("load", () => {
 
         entries.forEach((entry) => {
 
+            // if (entry.isIntersecting == true) {
+            //     console.log(entry.target, '=>', entry.intersectionRatio)
+            // }
+
             if (entry.intersectionRatio > ratio) {
                 // console.log('visible')
                 const menuActiveHomePage = document.getElementsByClassName('active')[0];
@@ -64,7 +78,9 @@ window.addEventListener("load", () => {
                 const menuActiveProjects = document.getElementsByClassName('active')[2];
                 const menuActiveSkills = document.getElementsByClassName('active')[3];
 
+
                 if (entry.target == section[0]) {
+
                     menuActiveHomePage.children[0].style.color = 'white';
                     menuActiveHomePage.children[0].style.backgroundColor = 'black';
                     menuActiveHomePage.children[0].style.border = 'none';
@@ -95,6 +111,8 @@ window.addEventListener("load", () => {
                 }
 
                 if (entry.target == section[3]) {
+
+
                     menuActiveSkills.children[0].style.color = 'white';
                     menuActiveSkills.children[0].style.backgroundColor = 'black';
                     menuActiveSkills.children[0].style.border = 'none';

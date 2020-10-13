@@ -77,46 +77,78 @@ window.addEventListener('load', () => {
                 entry.target.classList.add('revealed')
                 // console.log(entry.target, '->', index)
 
+
                 // About me -> title
                 if (entry.target == revealItem[0]) TweenLite.from(entry.target, 1, {x: -550, ease: Expo.easeOut });
+
                 // About me -> text
                 if (entry.target == revealItem[1]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeOut }, '-=0.4');
+
                 // About me -> CV
                 if (entry.target == revealItem[2]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeOut }, '-=0.4');
+
                 // My project -> title
                 if (entry.target == revealItem[3]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeOut });
+
                 // project -> studentManager
                 if (entry.target == revealItem[4])TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeOut });
+
                 // project -> kwick
                 if (entry.target == revealItem[5]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeOut });
+
                 // project -> webgl
                 if (entry.target == revealItem[6]) TweenLite.from(entry.target, 1, {y: 50, ease: Expo.easeOut });
+
                 // project -> global magazine
                 if (entry.target == revealItem[7]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
                 // project -> crud
                 if (entry.target == revealItem[8]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
                 // project -> last
                 if (entry.target == revealItem[9]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
                 // Skill -> title
                 if (entry.target == revealItem[10]) TweenLite.from(entry.target, 1, {x: -150, ease: Expo.easeOut });
+
                 // HTML
                 if (entry.target == revealItem[11]) TweenLite.from(entry.target, 1, {x: -150, ease: Expo.easeOut });
+
                 // CSS
                 if (entry.target == revealItem[12]) TweenLite.from(entry.target, 1, {y: -150, ease: Expo.easeOut });
+
                 // JS
-                if (entry.target == revealItem[13]) TweenLite.from(entry.target, 1, {x: 150, ease: Expo.easeOut });
-                // Git
-                if (entry.target == revealItem[14]) TweenLite.from(entry.target, 1, {x: -150, ease: Expo.easeOut });
+                if (entry.target == revealItem[13]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
+                // Framework
+                if (entry.target == revealItem[14]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
+                // Libraries
+                if (entry.target == revealItem[15]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
                 // PHP
-                if (entry.target == revealItem[15]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
-                // Indesign
                 if (entry.target == revealItem[16]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
+
+                // Base de donnée
+                if (entry.target == revealItem[17]) TweenLite.from(entry.target, 1, {x: -150, ease: Expo.easeOut });
+
+                // Bundler
+                if (entry.target == revealItem[18]) TweenLite.from(entry.target, 1, {y: -150, ease: Expo.easeOut });
+
+                // Git
+                if (entry.target == revealItem[19]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
+                // Indesign
+                if (entry.target == revealItem[20]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
                 // Illustrator
-                if (entry.target == revealItem[17]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
+                if (entry.target == revealItem[21]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
                 // Photoshop
-                if (entry.target == revealItem[18]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
+                if (entry.target == revealItem[22]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
+
                 // Première pro
-                if (entry.target == revealItem[19]) TweenLite.from(entry.target, 1, {y: 150, ease: Expo.easeOut });
+                if (entry.target == revealItem[23]) TweenLite.from(entry.target, 1, {y: 100, ease: Expo.easeOut });
 
             }
 

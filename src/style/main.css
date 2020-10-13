@@ -350,34 +350,37 @@ body .scroll{
 /* Name */
 
 .ctnr-datas-user .name-home-page {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 0;
     color: rgba(0, 0, 0, 1);
     font-family: Montserrat;
     font-weight: Bold;
 }
 
-.job {
+/* .job {
     height: 53px;
-}
+} */
 
 
 /* front-end */
 
 .ctnr-datas-user .front-end-home-page {
-    font-size: 1.2rem;
-    margin: 15px 0;
+    font-size: 0.7rem;
+    margin: 0;
     color: rgba(0, 0, 0, 0.8);
 }
+
+
 
 
 /* where */
 
 .ctnr-datas-user .base-home-page {
-    font-size: 1rem;
-    margin: 0;
+    font-size: 0.9rem;
+    margin: 15px 0;
     color: rgba(0, 0, 0, 0.6);
 }
+
 
 .background-grey {
     position: absolute;

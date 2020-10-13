@@ -4,6 +4,9 @@ import Typed from 'typed.js'
 
 window.addEventListener("load", () => {
 
+    document.getElementsByTagName('h1')[0].childNodes[0].nodeValue = ''
+
+
     // Typed.js
     const typed = new Typed('.name-home-page', {
         startDelay: 300,
@@ -18,7 +21,11 @@ window.addEventListener("load", () => {
         const typed1 = new Typed('.front-end-home-page', {
             startDelay: 100,
             loop: true,
-            strings: ['Développeur front-end^500', 'Développeur javaScript^500', 'Développeur React^500', 'Développeur HTML^500', 'Développeur CSS^500'],
+            strings: [
+                'Avec des compétences en HTML / CSS^500',
+                'Avec des compétences en JavaScript^500',
+                'Avec des compétences en React^500',
+            ],
             typeSpeed: 75,
         });
 
@@ -28,7 +35,7 @@ window.addEventListener("load", () => {
     const createLive = document.createElement('p');
     createLive.classList.add('base-home-page');
 
-    const appendText = document.createTextNode('Basé à Paris');
+    const appendText = document.createTextNode('Dévelopeur front-end basé à Paris');
     const parentWhere = document.querySelector('.base-to-paris');
     createLive.appendChild(appendText);
 
