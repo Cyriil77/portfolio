@@ -14,6 +14,6 @@ npm run dev
 # Build for production in the dist/ directory
 npm run build
 ```
-Mon portfolio a été réalisé avec [Webpack](https://webpack.js.org/) ainsi que les langages HTML / CSS / javaScript ainsi que [GSAP](https://greensock.com/gsap/) pour les animations.
+Mon portfolio a été réalisé avec [Webpack](https://webpack.js.org/) ainsi que les langages HTML / CSS / javaScript ainsi que la librairie [GSAP](https://greensock.com/gsap/) pour les animations.
 
 Pour voir mon portfolio: [https://marceau-cyril.com](https://marceau-cyril.com).
