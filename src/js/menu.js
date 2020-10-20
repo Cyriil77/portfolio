@@ -1,10 +1,11 @@
 'use strict';
 
 window.addEventListener("load", () => {
+
     //Icon header
     const displayMenu = document.querySelector('.display-menu-list');
 
-    //Div container menu
+    //Div container menu in mobile with name / icon / menu
     const parentMenu = document.querySelector('.ctnr-name-list-menu');
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -14,8 +15,9 @@ window.addEventListener("load", () => {
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+
             if (window.innerWidth <= 991.98) {
-                parentMenu.classList.toggle('open');
+                parentMenu.classList.add('open');
                 parentMenu.parentNode.style.height = 80 + 'px';
                 displayMenu.style.display = 'flex';
             }
@@ -26,8 +28,8 @@ window.addEventListener("load", () => {
     displayMenu.addEventListener('click', (e) => {
         e.preventDefault();
 
-        displayMenu.classList.toggle('open');
-        parentMenu.classList.toggle('open');
+        parentMenu.classList.add('open');
+        parentMenu.classList.remove('close');
 
         parentMenu.parentNode.style.height = 0;
         displayMenu.style.display = 'none';
@@ -40,11 +42,19 @@ window.addEventListener("load", () => {
         e.preventDefault();
 
 
-        displayMenu.classList.toggle('open');
-        parentMenu.classList.toggle('open');
+        parentMenu.classList.remove('open');
+        parentMenu.classList.add('close');
+        // parentMenu.style.transform = 'translateY(500px)'
+        // parentMenu.style.transitionDuration = '2s';
+        // parentMenu.transitionProperty = 'opacity';
+        // parentMenu.style.opacity = '0';
 
+        // Display header 80px
         parentMenu.parentNode.style.height = 80 + 'px';
+
+        // Display icon
         displayMenu.style.display = 'flex';
+
 
     })
 

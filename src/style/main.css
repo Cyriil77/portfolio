@@ -87,23 +87,30 @@ header .ctnr-name-list-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 40px 0;
-    transform: translateX(2000px);
     background-color: white;
-    transform-origin: center top;
-    transition: all 0.5s ease;
+    padding: 40px 0;
     position: fixed;
     width: 100%;
     z-index: 1;
+
+    transform: translateY(700px);
+    opacity: 0;
+
 }
 
 
 /* Animation when attribut get class open */
 
 header .ctnr-name-list-menu.open {
-    transform: translateX(0);
-    transition-duration: 800ms;
-    transition-property: transform;
+    transform: translateY(0);
+    transition-property: opacity;
+    opacity: 1;
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+header .ctnr-name-list-menu.close {
+    transform: translateY(700px);
+    transition-duration: 2s;
 }
 
 
