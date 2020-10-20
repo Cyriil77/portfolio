@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
             strings: [
                 'Avec des compétences en HTML / CSS^500',
                 'Avec des compétences en JavaScript^500',
-                'Avec des compétences en React^500',
+                'Avec des compétences en React.js^500',
             ],
             typeSpeed: 75,
         });

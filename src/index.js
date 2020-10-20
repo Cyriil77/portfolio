@@ -31,15 +31,14 @@ window.addEventListener("load", () => {
     tel.href = 'tel:0617881934';
 
     const mail = document.querySelectorAll('a')[6];
-    mail.href = 'mailto:marceau.cyril@hotmail.fr';
+    mail.href = 'mailto:marceaucyril.pro@hotmail.fr';
 
     const mailFooter = document.querySelectorAll('a')[16];
-    mailFooter.href = 'mailto:marceau.cyril@hotmail.fr';
+    mailFooter.href = 'mailto:marceaucyril.pro@hotmail.fr';
 
     const telFooter = document.querySelectorAll('a')[17];
     telFooter.href = 'tel:0617881934';
 
-    // console.log(document.querySelectorAll('a'))
 
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);

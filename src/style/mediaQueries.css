@@ -2,7 +2,7 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     /* Rem +0.2 */
-    p {
+    p, .datas-about-me p {
         font-size: 0.875rem;
     }
     h4 {
@@ -28,6 +28,11 @@
     .fai-title h2 {
         font-size: 1.625rem;
     }
+
+    .delete-mobile{
+        display: initial;
+    }
+
     .datas-about-me p {
         line-height: 2.3rem;
     }
@@ -60,7 +65,7 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-    p {
+    p, .datas-about-me p {
         font-size: 1rem;
     }
     h4 {
@@ -94,6 +99,11 @@
     .fai-title h2 {
         font-size: 1.75rem;
     }
+
+    .delete-mobile{
+        display: initial;
+    }
+
     .datas-about-me p {
         line-height: 2.5rem;
     }
@@ -160,7 +170,7 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     /* Rem +0.2 */
-    p {
+    p, .datas-about-me p {
         font-size: 1.0625rem;
     }
     h4 {
@@ -173,13 +183,18 @@
     header .ctnr-name-list-menu {
         display: flex;
         justify-content: space-around;
-        display: block;
+        /* display: block; */
         position: initial;
         width: 100%;
         padding: 0;
         height: 100%;
         background-color: inherit;
         transform: scaleY(1);
+    }
+
+    header nav ul {
+        flex-direction: row;
+        padding: 0;
     }
     header .ctnr-name-close{
         display: none;
@@ -235,6 +250,10 @@
     }
     .datas-about-me p {
         line-height: 3rem;
+    }
+
+    .delete-mobile{
+        display: initial;
     }
     .dl-cv input {
         font-size: 1.0625rem
@@ -313,7 +332,7 @@
 
 @media (min-width: 1200px) {
     /* Rem +0.2 */
-    p {
+    p, .datas-about-me p {
         font-size: 1.125rem;
     }
     h4 {
@@ -323,16 +342,22 @@
     header .display-menu-list {
         display: none;
     }
+
     header .ctnr-name-list-menu {
         display: flex;
         justify-content: space-around;
-        display: block;
+        /* display: block; */
         position: initial;
         width: 100%;
         padding: 0;
         height: 100%;
         background-color: inherit;
         transform: scaleY(1);
+    }
+
+    header nav ul {
+        flex-direction: row;
+        padding: 0;
     }
     header .ctnr-name-close{
         display: none;
@@ -385,6 +410,11 @@
     .fai-title h2 {
         font-size: 1.875rem;
     }
+
+    .delete-mobile{
+        display: initial;
+    }
+
     .datas-about-me{
         width: 90%;
     }

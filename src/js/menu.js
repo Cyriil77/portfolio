@@ -11,8 +11,6 @@ window.addEventListener("load", () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
-            console.log(this.parentNode.children[0])
-
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
@@ -40,7 +38,7 @@ window.addEventListener("load", () => {
 
     closeMenu.addEventListener('click', (e) => {
         e.preventDefault();
-        
+
 
         displayMenu.classList.toggle('open');
         parentMenu.classList.toggle('open');
@@ -55,7 +53,7 @@ window.addEventListener("load", () => {
     // Ratio for detect
     const section = document.querySelectorAll('section');
 
-    const ratio = .5;
+    let ratio = .1;
 
     const options = {
         root: null,
@@ -71,58 +69,86 @@ window.addEventListener("load", () => {
             //     console.log(entry.target, '=>', entry.intersectionRatio)
             // }
 
-            if (entry.intersectionRatio > ratio) {
-                // console.log('visible')
-                const menuActiveHomePage = document.getElementsByClassName('active')[0];
-                const menuActiveAboutMe = document.getElementsByClassName('active')[1];
-                const menuActiveProjects = document.getElementsByClassName('active')[2];
-                const menuActiveSkills = document.getElementsByClassName('active')[3];
 
+            if (window.innerWidth < 991.98) {
+                if (entry.intersectionRatio > options.threshold) {
+                    
+                    console.clear()
+                    console.log('visible:', entry.target)
+                    const menuActive = document.getElementsByClassName('list-menu-icon');
 
-                if (entry.target == section[0]) {
+                    if (entry.target == section[0]) {
+                        menuActive[0].classList.add('active')
+                    } else {
+                        menuActive[0].classList.remove('active')
+                    }
 
-                    menuActiveHomePage.children[0].style.color = 'white';
-                    menuActiveHomePage.children[0].style.backgroundColor = 'black';
-                    menuActiveHomePage.children[0].style.border = 'none';
+                    if (entry.target == section[1]) {
+                        menuActive[1].classList.add('active');
+                    } else {
+                        menuActive[1].classList.remove('active');
+                    }
+
+                    if (entry.target == section[2]) {
+                        menuActive[2].classList.add('active');
+                    } else {
+                        menuActive[2].classList.remove('active');
+                    }
+
+                    if (entry.target == section[3]) {
+                        menuActive[3].classList.add('active');
+                    } else {
+                        menuActive[3].classList.remove('active');
+                    }
+
                 } else {
-                    menuActiveHomePage.children[0].style.color = 'black';
-                    menuActiveHomePage.children[0].style.backgroundColor = 'rgba(236, 236, 236, 0.4)';
-                    menuActiveHomePage.children[0].style.border = 'none';
+                    // console.log("invisible," , entry.target)
                 }
+            } else {
 
-                if (entry.target == section[1]) {
-                    menuActiveAboutMe.children[0].style.color = 'white';
-                    menuActiveAboutMe.children[0].style.backgroundColor = 'black';
-                    menuActiveAboutMe.children[0].style.border = 'none';
-                } else {
-                    menuActiveAboutMe.children[0].style.color = 'black';
-                    menuActiveAboutMe.children[0].style.backgroundColor = 'rgba(236, 236, 236, 0.4)';
-                    menuActiveAboutMe.children[0].style.border = 'none';
-                }
+                ratio = .5
 
-                if (entry.target == section[2]) {
-                    menuActiveProjects.children[0].style.color = 'white';
-                    menuActiveProjects.children[0].style.backgroundColor = 'black';
-                    menuActiveProjects.children[0].style.border = 'none';
-                } else {
-                    menuActiveProjects.children[0].style.color = 'black';
-                    menuActiveProjects.children[0].style.backgroundColor = 'rgba(236, 236, 236, 0.4)';
-                    menuActiveProjects.children[0].style.border = 'none';
-                }
+                console.log(ratio)
+                if (entry.intersectionRatio > options.threshold) {
 
-                if (entry.target == section[3]) {
+                    console.clear()
+                    console.log('visible:', entry.target)
 
+                    // console.log('visible')
+                    const menuActive = document.getElementsByClassName('list-menu-icon');
 
-                    menuActiveSkills.children[0].style.color = 'white';
-                    menuActiveSkills.children[0].style.backgroundColor = 'black';
-                    menuActiveSkills.children[0].style.border = 'none';
-                } else {
-                    menuActiveSkills.children[0].style.color = 'black';
-                    menuActiveSkills.children[0].style.backgroundColor = 'rgba(236, 236, 236, 0.4)';
-                    menuActiveSkills.children[0].style.border = 'none';
+                    if (entry.target == section[0]) {
+
+                        menuActive[0].classList.add('active')
+                    } else {
+                        menuActive[0].classList.remove('active')
+                    }
+
+                    if (entry.target == section[1]) {
+
+                        menuActive[1].classList.add('active');
+                    } else {
+                        menuActive[1].classList.remove('active');
+                    }
+
+                    if (entry.target == section[2]) {
+
+                        menuActive[2].classList.add('active');
+                    } else {
+                        menuActive[2].classList.remove('active');
+                    }
+
+                    if (entry.target == section[3]) {
+
+                        menuActive[3].classList.add('active');
+                    } else {
+                        menuActive[3].classList.remove('active');
+                    }
                 }
 
             }
+
+
 
         })
 
