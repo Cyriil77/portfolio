@@ -5,25 +5,23 @@ const path = require('path')
 
 module.exports = {
     entry: path.resolve(__dirname, '../src/index.js'),
-    output:
-    {
-        filename: 'bundle.[hash].js',
+    output: {
+        filename: 'js/bundle.[hash].js',
         path: path.resolve(__dirname, '../dist')
     },
     devtool: 'source-map',
-    plugins:
-    [
-        new CopyWebpackPlugin([ { from: path.resolve(__dirname, '../static') } ]),
+    plugins: [
+        new CopyWebpackPlugin([{ from: path.resolve(__dirname, '../static') }]),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html'),
             minify: true
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename: "css/[hash].css"
+        })
     ],
-    module:
-    {
-        rules:
-        [
+    module: {
+        rules: [
             // HTML
             {
                 test: /\.(html)$/,
@@ -34,8 +32,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use:
-                [
+                use: [
                     'babel-loader'
                 ]
             },
@@ -43,41 +40,32 @@ module.exports = {
             // CSS
             {
                 test: /\.css$/,
-                use:
-                [
+                use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader'
+                    'css-loader',
                 ]
             },
 
             // Images
             {
                 test: /\.(jpg|png|gif|svg)$/,
-                use:
-                [
-                    {
-                        loader: 'file-loader',
-                        options:
-                        {
-                            outputPath: 'assets/images/'
-                        }
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'assets/images/'
                     }
-                ]
+                }]
             },
 
             // Font
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use:
-                [
-                    {
-                        loader: 'file-loader',
-                        options:
-                        {
-                            outputPath: 'fonts/'
-                        }
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'assets/fonts/'
                     }
-                ]
+                }]
             },
 
             // Shaders

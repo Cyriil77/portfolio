@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /orderRestaurant/
+Disallow: /serie/
+Disallow: /studentManager/
+Disallow: /theWeeknd/
 
 Sitemap: https://marceau-cyril.com/sitemap.xml
